@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="GraficadorSenales.ConfiguracionExponencial"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GraficadorSenales"
+             mc:Ignorable="d" Height="34.71" Width="261.846">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="1,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Width="120" Height="32" Text="Alfa: "/>
+        <TextBox x:Name="txtAlfa" HorizontalAlignment="Left" Height="32" Margin="139,0,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" FontSize="16"/>
+
+    </Grid>
+</UserControl>
