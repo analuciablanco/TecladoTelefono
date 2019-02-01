@@ -26,7 +26,7 @@
         <TextBlock x:Name="lblAmplitudMaximaY" HorizontalAlignment="Left" Margin="26,110,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" FontSize="15" Width="40" Height="25"/>
         <TextBlock x:Name="lblAmplitudMaximaY_Negativa" HorizontalAlignment="Left" Margin="26,270,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" FontSize="15" Width="40" Height="25"/>
         <TextBlock x:Name="lblAmplitudCero" HorizontalAlignment="Left" Margin="18,193,0,0" TextWrapping="Wrap" Text="-0-" VerticalAlignment="Top" FontSize="15" Width="48" RenderTransformOrigin="0.524,9.05" Height="25"/>
-        <ScrollViewer x:Name="scrResultadoOperacion" HorizontalAlignment="Left" Height="202" Margin="71,381,0,0" VerticalAlignment="Top" Width="1103" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Hidden">
+        <ScrollViewer x:Name="scrResultadoOperacion" HorizontalAlignment="Left" Height="202" Margin="71,381,0,0" VerticalAlignment="Top" Width="970" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Hidden">
             <Grid>
                 <Polyline x:Name="plnGraficaResultado" Stroke="Brown" StrokeThickness="2"/>
                 <Polyline x:Name="plnEjeXResultado" Stroke="Gray" StrokeThickness="1"/>
@@ -38,10 +38,14 @@
         <TextBlock x:Name="lblAmplitudMaximaY_Negativa_Copy" HorizontalAlignment="Left" Margin="26,545,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" FontSize="15" Width="40" Height="20"/>
         <TextBlock x:Name="lblAmplitudCero_Copy" HorizontalAlignment="Left" Margin="18,483,0,0" TextWrapping="Wrap" Text="-0-" VerticalAlignment="Top" FontSize="15" Width="48" RenderTransformOrigin="0.524,9.05" Height="20"/>
         <Button x:Name="btnFourier" Content="Transformada de Fourier" HorizontalAlignment="Left" Margin="71,356,0,0" VerticalAlignment="Top" Width="170" Click="btnFourier_Click"/>
-        <TextBlock x:Name="lblHz" HorizontalAlignment="Left" Margin="1054,344,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Width="120" Height="32"><Run Text="0 "/><Run Text="Hz"/></TextBlock>
+        <TextBlock x:Name="lblHz_1" HorizontalAlignment="Left" Margin="1054,381,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Width="120" Height="32"><Run Text="0 "/><Run Text="Hz"/></TextBlock>
+        <TextBlock x:Name="lbl_1" HorizontalAlignment="Left" Margin="1054,344,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Width="120" Height="32" Text="Valor 1"/>
+        <TextBlock x:Name="lblHz_2" HorizontalAlignment="Left" Margin="1054,466,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Width="120" Height="32"><Run Text="0 "/><Run Text="Hz"/></TextBlock>
+        <TextBlock x:Name="lbl_2" HorizontalAlignment="Left" Margin="1054,434,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Width="120" Height="32" Text="Valor 2"/>
+        <TextBlock x:Name="lbl_Tecla" HorizontalAlignment="Left" Margin="1054,518,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Width="120" Height="32" Text="Tecla:"/>
+        <TextBlock x:Name="lbl_TeclaValor" HorizontalAlignment="Left" Margin="1054,547,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Width="120" Height="32"/>
         <TextBlock HorizontalAlignment="Left" Margin="18,27,0,0" TextWrapping="Wrap" Text="Ruta de archivo:" VerticalAlignment="Top" FontSize="16"/>
         <TextBox x:Name="txtRutaArchivo" HorizontalAlignment="Left" Height="23" Margin="152,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="295" FontSize="16"/>
         <Button Content="Examinar" HorizontalAlignment="Left" Margin="352,59,0,0" VerticalAlignment="Top" Width="95" FontSize="16" Click="btn_Examinar"/>
-        <TextBlock x:Name="lbl_indiceMax" HorizontalAlignment="Left" Margin="834,348,0,0" TextWrapping="Wrap" Text="0 índice max" VerticalAlignment="Top"/>
     </Grid>
 </Window>
