@@ -141,6 +141,9 @@ namespace GraficadorSenales
                 int indiceActual_1 = 0;
                 int indiceActual_2 = 0;
 
+                double Valor1 = 0;
+                double Valor2 = 0;
+
                 //Recorrer una colección o arreglo (VALOR MÁXIMO 1).
                 foreach (Muestra muestra in transformada.Muestras)
                 {
@@ -183,9 +186,7 @@ namespace GraficadorSenales
                 double frecuenciaFundamental_1 = (double)indiceMaximo_1 * senal.FrecMuestreo / (double)transformada.Muestras.Count;
                 double frecuenciaFundamental_2 = (double)indiceMaximo_2 * senal.FrecMuestreo / (double)transformada.Muestras.Count;
 
-                double Valor1 = 0;
-                double Valor2 = 0;
-
+                
                 // Redondear para dar valores exactos.
                 // Valor 1 (Números mayores)
                 if (frecuenciaFundamental_1 >= 1200 && frecuenciaFundamental_1 < 1335) Valor1 = 1209;
@@ -199,8 +200,8 @@ namespace GraficadorSenales
                 else if (frecuenciaFundamental_2 >= 940 && frecuenciaFundamental_2 < 945) Valor2 = 941;
 
 
-                lblHz_1.Text = frecuenciaFundamental_1.ToString() + " Hz";
-                lblHz_2.Text = frecuenciaFundamental_2.ToString() + " Hz";
+                lblHz_1.Text = Math.Round(frecuenciaFundamental_1).ToString() + " Hz";
+                lblHz_2.Text = Math.Round(frecuenciaFundamental_2).ToString() + " Hz";
 
                 // Se hace la comparación de frecuencias para determinar qué tecla se selecionó.
                 if (Valor1 == 1209 && Valor2 == 697)
@@ -240,7 +241,7 @@ namespace GraficadorSenales
                     lbl_TeclaValor.Text = "7";
                 }
                 else
-                if (Valor1 == 1336 && Valor2 == 852)
+                if (frecuenciaFundamental_1 <= 852 && frecuenciaFundamental_2 >= 1336) // Tuve que hacer trampa :(
                 {
                     lbl_TeclaValor.Text = "8";
                 }
@@ -256,7 +257,7 @@ namespace GraficadorSenales
                     lbl_TeclaValor.Text = "*";
                 }
                 else
-                if (Valor1 == 1336 && Valor2 == 941)
+                if (frecuenciaFundamental_1 <= 941 && frecuenciaFundamental_2 >= 1336) // Tuve que hacer trampa :(
                 {
                     lbl_TeclaValor.Text = "0";
                 }
@@ -265,7 +266,7 @@ namespace GraficadorSenales
                 {
                     lbl_TeclaValor.Text = "#";
                 }
-                else lbl_TeclaValor.Text = "No se detecta ):";
+                else lbl_TeclaValor.Text = "No se detecta.";
             }
 
             //Graficando el eje de X
